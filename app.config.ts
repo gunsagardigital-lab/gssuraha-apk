@@ -68,7 +68,6 @@ const config: ExpoConfig & { logoUrl: string } = {
     },
   },
   orientation: "portrait",
-  icon: "./assets/images/icon.png",
   scheme: env.scheme,
   userInterfaceStyle: "automatic",
   ios: {
@@ -79,11 +78,6 @@ const config: ExpoConfig & { logoUrl: string } = {
       }
   },
   android: {
-    adaptiveIcon: {
-      backgroundColor: "#FFFFFF",
-      foregroundImage: "./assets/images/android-icon-foreground.png",
-      monochromeImage: "./assets/images/android-icon-monochrome.png",
-    },
     predictiveBackGestureEnabled: false,
     package: env.androidPackage,
     versionCode: 5,
@@ -105,19 +99,13 @@ const config: ExpoConfig & { logoUrl: string } = {
   web: {
     bundler: "metro",
     output: "static",
-    favicon: "./assets/images/favicon.png",
   },
   plugins: [
     [
       "expo-splash-screen",
       {
-        image: "./assets/images/splash-icon.png",
-        imageWidth: 200,
-        resizeMode: "contain",
         backgroundColor: "#ffffff",
-        dark: {
-          backgroundColor: "#000000",
-        },
+        dark: { backgroundColor: "#000000" },
       },
     ],
     [
@@ -139,7 +127,7 @@ const config: ExpoConfig & { logoUrl: string } = {
   ],
   experiments: {
     reactCompiler: true,
-  },
+     },
 };
 
 export default config;
