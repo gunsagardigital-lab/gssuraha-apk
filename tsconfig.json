@@ -1,0 +1,13 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "types": ["node", "expo/types"],
+    "paths": {
+      "@/*": ["./*"],
+      "@shared/*": ["./shared/*"]
+    }
+  },
+  "include": ["App.tsx", "lib/**/*.ts", "expo-env.d.ts"],
+  "exclude": ["node_modules", "dist", "server", "drizzle", "scripts"]
+}
